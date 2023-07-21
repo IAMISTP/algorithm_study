@@ -1,5 +1,11 @@
 let fs = require("fs");
-let input = fs.readFileSync("input.txt").toString();
-for (let i = 1; i < 10; i++) {
-  console.log(`${parseInt(input)} * ${i} = ${parseInt(input) * i}`);
+let input = fs.readFileSync("input.txt").toString().split("\n");
+let num = Number(input[0]);
+let result = "";
+for (let i = 0; i < num; i++) {
+  for (let j = 0; j <= i; j++) {
+    result += "*";
+  }
+  result += "\n";
 }
+console.log(result);
