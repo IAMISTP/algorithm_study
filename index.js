@@ -1,3 +1,3 @@
 let fs = require("fs");
-let input = fs.readFileSync("input.txt").toString();
-console.log(input);
+let [a, b] = fs.readFileSync("input.txt").toString().split(" ").map(Number);
+console.log(a + b);
