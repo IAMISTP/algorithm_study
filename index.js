@@ -1,11 +1,7 @@
 let fs = require("fs");
 let input = fs.readFileSync("input.txt").toString().split("\n");
-let num = Number(input[0]);
-let result = "";
-for (let i = 0; i < num; i++) {
-  for (let j = 0; j <= i; j++) {
-    result += "*";
-  }
-  result += "\n";
-}
-console.log(result);
+let cnt = Number(input[0]);
+let numbers = input[1].split(" ").map(Number);
+let min = numbers.reduce((a, b) => Math.min(a, b));
+let max = numbers.reduce((a, b) => Math.max(a, b));
+console.log(min, max);
