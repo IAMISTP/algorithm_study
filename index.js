@@ -1,7 +1,10 @@
 let fs = require("fs");
-let [a, b] = fs.readFileSync("input.txt").toString().split(" ").map(Number);
-console.log(a + b);
-console.log(a - b);
+let input = fs.readFileSync("input.txt").toString().split("\n");
+let a = Number(input[0]);
+let b = Number(input[1].split("")[0]);
+let c = Number(input[1].split("")[1]);
+let d = Number(input[1].split("")[2]);
+console.log(a * d);
+console.log(a * c);
 console.log(a * b);
-console.log(parseInt(a / b));
-console.log(a % b);
+console.log(a * Number(input[1]));
