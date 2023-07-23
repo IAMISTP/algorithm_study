@@ -1,6 +1,8 @@
 let fs = require("fs");
-let input = fs.readFileSync("input.txt").toString().split(" ");
-
-let a = Number(input[0].split("").reverse().join(""));
-let b = Number(input[1].split("").reverse().join(""));
-console.log(a > b ? a : b);
+let input = fs.readFileSync("input.txt").toString().split("\n");
+let result = input[0].trim().split(" ");
+if (result == "") {
+  console.log(0);
+} else {
+  console.log(result.length);
+}
