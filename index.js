@@ -1,4 +1,6 @@
 let fs = require("fs");
-let input = fs.readFileSync("input.txt").toString().split("\n");
-let numbers = input[1].split("").map(Number);
-console.log(numbers.reduce((a, b) => a + b, 0));
+let input = fs.readFileSync("input.txt").toString().split(" ");
+
+let a = Number(input[0].split("").reverse().join(""));
+let b = Number(input[1].split("").reverse().join(""));
+console.log(a > b ? a : b);
