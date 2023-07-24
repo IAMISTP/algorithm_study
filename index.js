@@ -1,8 +1,9 @@
 let fs = require("fs");
-let input = fs.readFileSync("input.txt").toString().split("\n");
-let result = input[0].trim().split(" ");
-if (result == "") {
-  console.log(0);
-} else {
-  console.log(result.length);
+let input = fs.readFileSync("input.txt").toString().split(" ").map(Number);
+function compare(a, b) {
+  return a - b;
+}
+input.sort(compare);
+for (let n of input) {
+  console.log(n);
 }
